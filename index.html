@@ -3,13 +3,18 @@
     <meta charset="UTF-8" />
     
     <script src="script.js"></script>
-    <script type="module">
+
+    <script src="./dd.js" type="module">
+      console.log("ssssss");
+    </script>
+
+    <script src ="./photoswipe-lightbox.esm.js"type="module">
       console.log("loaded");
-      import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
+      import PhotoSwipeLightbox from '/photoswipe-lightbox.esm.js';
       const lightbox = new PhotoSwipeLightbox({
         gallery: '#gallery--getting-started',
         children: 'a',
-        pswpModule: () => import('/photoswipe/photoswipe.esm.js')
+        pswpModule: () => import('/photoswipe.esm.js')
       });
       lightbox.init();
       </script>
