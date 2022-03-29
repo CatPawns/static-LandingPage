@@ -1,0 +1,9 @@
+body {
+  background: orange;
+}
+.image-contents div:hover {
+  opacity: 1;
+}
+a{
+  text-decoration: none;
+}
