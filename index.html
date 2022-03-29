@@ -4,11 +4,11 @@
     
     <script src="script.js"></script>
 
-    <script src="./dd.js" type="module">
-      console.log("ssssss");
+    <script type="module" src="./dd.js" >
+      console.log("moduleWoking");
     </script>
 
-    <script src ="./photoswipe-lightbox.esm.js"type="module">
+    <script type="module">
       console.log("loaded");
       import PhotoSwipeLightbox from '/photoswipe-lightbox.esm.js';
       const lightbox = new PhotoSwipeLightbox({
@@ -18,7 +18,8 @@
       });
       lightbox.init();
       </script>
-    
+         <link rel="stylesheet" type="text/css" href="photoswipe.css"> 
+
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
   </head>
   <body>
