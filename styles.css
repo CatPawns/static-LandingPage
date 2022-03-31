@@ -2,15 +2,10 @@ body {
   background: orange;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   margin: 0px;
+  height: 100vh;
 }
-.image-contents div:hover {
-  opacity: 1;
-}
-.image-contents div:hover {
-  opacity: 1;
-}
+
 a{
   text-decoration: none;
 }
@@ -53,7 +48,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    position: sticky;
+    position: relative;
   }
 }
 .logo {
@@ -132,6 +127,7 @@ a{
   background-color: rgba(255, 255, 255, 1);
   flex-direction: column;
   display: flex;
+  min-height: 600px;
   margin-right: 40px;
   margin-left: 40px;
   margin-bottom: 40px;
@@ -306,4 +302,10 @@ a{
   text-align: center;
   color: rgba(255, 255, 255, 1);
   font-family: PT Sans, sans-serif;
+}
+.image-contents div:hover {
+  opacity: 1;
+}
+.image-contents div:hover {
+  opacity: 1;
 }
