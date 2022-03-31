@@ -1,0 +1,162 @@
+
+<div id="Gallery">Gallery</div>
+
+<html>
+ 
+
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script>
+  <head>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>  
+
+
+    
+    <meta charset="UTF-8" />
+    
+    <script src="script.js"></script>
+
+    <script type="module" src="./dd.js" >
+      console.log("moduleWoking");
+    </script>
+
+    <script type="module">
+      console.log("loaded");
+      import PhotoSwipeLightbox from './photoswipe-lightbox.esm.js';
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery--getting-started',
+        children: 'a',
+        pswpModule: () => import('./photoswipe.esm.js')
+      });
+      lightbox.init();
+      </script>
+         <link rel="stylesheet" type="text/css" href="./photoswipe.css"> 
+
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  </head>
+  <body onbeforeunload="dismount()">
+    
+    <div id="headerID"></div>
+    <div id="page-contentID"></div>
+    <div id="footerID"></div>
+
+  
+<a href="static-LandingPage/me2.html" rel="home">Inkishipaint</a></h1>
+<a href="/me.html">My other page</a>
+<a href="/me2.html">My other page</a>
+<a href="/me3.html">My other page</a>
+<div
+  class="pswp-gallery pswp-gallery--single-column"
+  id="gallery--getting-started"
+>
+  <a
+    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+    data-pswp-width="1669"
+    data-pswp-height="2500"
+    target="_blank"
+  >
+    <img
+      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
+      alt=""
+    />
+  </a>
+  <!-- cropped thumbnail: -->
+  <a
+    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg"
+    data-pswp-width="1875"
+    data-pswp-height="2500"
+    data-cropped="true"
+    target="_blank"
+  >
+    <img
+      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg"
+      alt=""
+    />
+    Cropped
+  </a>
+  <!-- data-pswp-src with custom URL in href -->
+  <a
+    href="https://unsplash.com"
+    data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+    data-pswp-width="2500"
+    data-pswp-height="1666"
+    target="_blank"
+  >
+    <img
+      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
+      alt=""
+    />
+  </a>
+  <!-- Without thumbnail: -->
+  <a
+    href="http://example.com"
+    data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"
+    data-pswp-width="2500"
+    data-pswp-height="1668"
+    target="_blank"
+  >
+    No thumbnail
+  </a>
+  <!-- wrapped with any element: -->
+  <div>
+    <a
+      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
+      data-pswp-width="2500"
+      data-pswp-height="1667"
+      target="_blank"
+    >
+      <img
+        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg"
+        alt=""
+      />
+    </a>
+  </div>
+</div>
+<script defer> 
+  $(function(){
+    $("#headerID").load("/Header.html");
+    $("#page-contentID").load("/page-content.html");
+    $("#footerID").load("/footer.html");
+    console.log("header load!");
+  });
+
+  function dismount()
+  {
+    console.log("exit");
+    lightbox.destroy();
+  }
+  </script> 
+  </body>
+
+</html>
