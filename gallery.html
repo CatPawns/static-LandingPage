@@ -65,7 +65,7 @@
 
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
   </head>
-  <body onbeforeunload="dismount()">
+  <body onbeforeunload="dismount()" onload="loadPage()">
     
     <div id="headerID"></div>
     <div id="page-contentID"></div>
@@ -73,9 +73,9 @@
 
   
 <a href="static-LandingPage/me2.html" rel="home">Inkishipaint</a></h1>
-<a href="/me.html">My other page</a>
-<a href="/me2.html">My other page</a>
-<a href="/me3.html">My other page</a>
+<a href="./me.html">My other page</a>
+<a href="./me2.html">My other page</a>
+<a href="./me3.html">My other page</a>
 <div
   class="pswp-gallery pswp-gallery--single-column"
   id="gallery--getting-started"
@@ -144,12 +144,16 @@
   </div>
 </div>
 <script defer> 
-  $(function(){
+function loadPage()
+{
+
+  $(()=>{
     $("#headerID").load("./Header.html");
     $("#page-contentID").load("./page-content.html");
     $("#footerID").load("./footer.html");
     console.log("header load!");
   });
+}
 
   function dismount()
   {
