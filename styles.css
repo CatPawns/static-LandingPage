@@ -1,6 +1,6 @@
 body {
-  background: orange;
-  margin:0
+  background: white;
+  margin:0;
 }
 .image-contents div:hover {
   opacity: 1;
@@ -9,7 +9,7 @@ a{
   text-decoration: none;
 }
 body {
-  background: orange;
+  background: rgb(255, 255, 255);
 }
 .image-contents div:hover {
   opacity: 1;
@@ -34,6 +34,7 @@ a{
   background-image: url(https://cdna.artstation.com/p/assets/images/images/007/657/242/large/kilart-choe-heonhwa-8.jpg?1507655121);
   display: flex;
   flex-direction: column;
+  width: auto;
 }
 @media (max-width: 991px) {
   .header {
@@ -143,7 +144,7 @@ a{
   margin-left: 40px;
   margin-bottom: 40px;
   margin-top: 40px;
-  height: 100%;
+  height: auto;
   min-height: 600px;
 }
 @media (max-width: 991px) {
@@ -270,6 +271,7 @@ a{
   min-height: 600px;
   line-height: 1.6;
   padding-left: 4em;
+  font-size: 20;
   padding-right: 4em;
   font-family: "PT Sans", sans-serif;
   flex-direction: column;
@@ -293,8 +295,13 @@ a{
   flex-grow: 1;
   width: 55%;
   height: auto;
+  border-bottom: 2px solid #555;
   flex-direction: column;
   display: flex;
+}
+
+strong {
+  color: #333;
 }
 .title {
   position: relative;
@@ -341,6 +348,7 @@ a{
   margin: 0 auto;
   color: #555;
   display: flex;
+  font-size: 20;
   flex-direction: column;
   font-family: "PT Sans", sans-serif;
   padding-right: 4em;
@@ -386,6 +394,11 @@ a{
   margin-bottom: auto;
   display: block;
 }
+a
+{
+  color: #268bd2;
+
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -423,6 +436,7 @@ a{
 .a-2 {
   max-width: 68px;
   justify-content: flex-start;
+  border-style: solid;
   border-radius: 55px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -470,3 +484,19 @@ a{
   color: rgba(255, 255, 255, 1);
   font-family: PT Sans, sans-serif;
 }
+.cc div.cc-overlay:hover {
+  opacity: 0;
+  transition: .3s ease;
+ }
+ .nav a:hover{
+  opacity: 1;
+  transition: .2s ease;
+  text-decoration: none;
+ }
+ .socials-contents a:hover{
+  color: white;
+  border: rgb(184, 184, 184);
+  border-style: solid;
+  background-color: rgb(43, 43, 43);
+  transition: .2s ease;
+ }
