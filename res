@@ -1,6 +1,8 @@
 https://imgur.com/kRBx0WM
 https://imgur.com/S6lLxID
 https://imgur.com/CkhDchw
+https://www.krenzartwork.com/storage/uploads/assistants_works/20200528/oemGKwC95laocQfF.jpeg
+#3c3c3c
 {
     box-sizing: border-box;
   }

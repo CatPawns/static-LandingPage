@@ -1,6 +1,6 @@
 <head>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script>
-<div>contact</div>
+
 </head>
 <body onbeforeunload="dismount()" onload="loadPage()">
     
@@ -16,7 +16,7 @@ function loadPage()
 {
 
   $(()=>{
-    $("#headerID").load("./Header.html");
+    $("#headerID").load("./Header.html #headerID");
     $("#page-contentID").load("./me3.html #Socialpage-contentID");
     $("#footerID").load("./footer.html");
     console.log("header load!");

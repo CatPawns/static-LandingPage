@@ -6,10 +6,27 @@
         children: 'a',
         showHideAnimationType: 'fade',
         secondaryZoomLevel: 1.5,
+        bgOpacity: 0.76,
         pswpModule: () => import('./photoswipe.esm.js')
       });
       lightbox.init();
+
       </script>
+
+    <script>
+    const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('animate__animated animate__fadeInUp animate__delay-1s');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.boxim'));
+    </script>
 <div id='"footerId"' class="footer">
 <div class="socials">
   <div class="socials-contents">
@@ -27,6 +44,12 @@
 </div>
 <div class="footer-2">
   <div class="footer-area"><p>Privacy</p></div>
+  <div class="nav" style="font-size : 14 !important">
+  <a href="#" class="a">Top</a>
+  <a href="./about.html" class="a">About</a>
+  <a href="./contact.html" class="a">Contact</a>
+</div>
+  
 </div>
 </div>
 </div>

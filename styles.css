@@ -1,20 +1,18 @@
 body {
-  background: white;
-  margin:0;
+  background: lavender;
+  margin: 0;
 }
 .image-contents div:hover {
   opacity: 1;
 }
-a{
+a {
   text-decoration: none;
 }
-body {
-  background: rgb(255, 255, 255);
-}
+
 .image-contents div:hover {
   opacity: 1;
 }
-a{
+a {
   text-decoration: none;
 }
 
@@ -24,6 +22,7 @@ a{
   justify-content: flex-start;
 }
 .header {
+  z-index: 4;
   padding-bottom: 16px;
   background-color: rgba(0, 0, 0, 1);
   min-height: 385px;
@@ -136,7 +135,7 @@ a{
 .page-content {
   padding-top: 6px;
   padding-bottom: 6px;
-  background-color: rgba(255, 255, 255, 1);
+
   flex-direction: column;
   display: flex;
   max-width: 1407.048828125px;
@@ -145,7 +144,7 @@ a{
   margin-bottom: 40px;
   margin-top: 40px;
   height: auto;
-  min-height: 600px;
+  min-height: 800px;
 }
 @media (max-width: 991px) {
   .page-content {
@@ -160,11 +159,12 @@ a{
 .horizontal-view {
   flex-direction: row;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 2%;
-  max-height: calc(100vw * 0.3);
+
   pointer-events: auto;
   max-width: 100%;
-  height: calc(100vw * 0.3);
+  height: auto;
   margin-bottom: 2%;
 }
 @media (max-width: 991px) {
@@ -174,12 +174,13 @@ a{
   }
 }
 .cc {
+  overflow: hidden;
   position: relative;
-  width: 33.33%;
+  width: 400px;
   align-self: center;
   flex-direction: column;
   display: flex;
-  height: inherit;
+  height: 400px;
   max-width: 500px;
   max-height: inherit;
   margin-top: auto;
@@ -190,6 +191,8 @@ a{
   pointer-events: auto;
 }
 .boxim {
+  transition: 0.3s linear;
+   z-index: -2;
   position: relative;
   width: 100%;
   display: flex;
@@ -211,15 +214,17 @@ a{
 }
 .cc-overlay {
   position: absolute;
-  height: 100%;
-  background-color: rgba(17, 17, 17, 1);
-  width: 100%;
+  height: inherit;
+  z-index: 2;
+  transition: .5s ease;
+  background-color: rgba(17, 17, 17, 0.5);
+  width: inherit;
   object-fit: cover;
-  opacity: 0.46;
+  opacity: 1;
   flex-grow: 0;
   flex-direction: column;
   margin-top: auto;
-  min-height: 100%;
+  min-height: auto;
   display: flex;
   margin-bottom: auto;
   margin-left: auto;
@@ -233,6 +238,7 @@ a{
   margin-left: auto;
   margin-right: auto;
   height: auto;
+  transition: .2s linear;
   width: 100%;
   position: relative;
   line-height: normal;
@@ -273,7 +279,7 @@ a{
   padding-left: 4em;
   font-size: 20;
   padding-right: 4em;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   flex-direction: column;
   display: flex;
   color: #555;
@@ -350,7 +356,7 @@ strong {
   display: flex;
   font-size: 20;
   flex-direction: column;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   padding-right: 4em;
   padding-left: 4em;
   line-height: 1.6;
@@ -394,10 +400,8 @@ strong {
   margin-bottom: auto;
   display: block;
 }
-a
-{
+a {
   color: #268bd2;
-
 }
 .footer {
   display: flex;
@@ -486,17 +490,407 @@ a
 }
 .cc div.cc-overlay:hover {
   opacity: 0;
-  transition: .3s ease;
- }
- .nav a:hover{
+  transition: 0.3s ease;
+}
+.nav a:hover {
   opacity: 1;
-  transition: .2s ease;
+  transition: 0.2s ease;
   text-decoration: none;
- }
- .socials-contents a:hover{
+  transform: translate(0, 5px) scale(1.1);
+}
+.cc div:hover {
+  transition: 1.3s ease;
+  transform: scale(1.05);
+  
+}
+.horizontal-view :hover .box {
+  transform: translate(0,-32px);
+  transition: .3 linear;
+  
+}
+.horizontal-view :hover .boxim {
+  transition: 0.3s linear;
+  transform: scale(1.15);
+  box-shadow: 3px 3px 0px;
+}
+
+.socials-contents a:hover {
   color: white;
   border: rgb(184, 184, 184);
   border-style: solid;
   background-color: rgb(43, 43, 43);
-  transition: .2s ease;
- }
+  transition: 0.2s ease;
+}
+.animation-slide {
+  animation: animation 1000ms linear both;
+  animation-delay: 2000;
+}
+
+/* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22t%22%2Ce%3A%22b%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A-50%2Cy%3A0%7D%2Ct%3A%7Bx%3A50%2Cy%3A0%7D%2Cs%3A3%2Cb%3A4%7D%2C%7BT%3A%22c%22%2Ce%3A%22s%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A1%2Cy%3A1%7D%2Ct%3A%7Bx%3A1.5%2Cy%3A1.5%7D%2Cs%3A3%2Cb%3A4%7D%2C%7BT%3A%22t%22%2Ce%3A%22b%22%2Cd%3A1000%2CD%3A500%2Cf%3A%7Bx%3A0%2Cy%3A0%7D%2Ct%3A%7Bx%3A-100%2Cy%3A0%7D%2Cs%3A3%2Cb%3A4%7D%5D%7D */
+
+@keyframes animation {
+  0% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      -3000,
+      0,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, 0, 0, 1);
+  }
+  4.1% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      -125.912,
+      0,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -125.912, 0, 0, 1);
+  }
+  8.11% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      -31.647,
+      0,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -31.647, 0, 0, 1);
+  }
+  12.11% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      5.53,
+      0,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.53, 0, 0, 1);
+  }
+  16.12% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      13.007,
+      0,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.007, 0, 0, 1);
+  }
+  27.23% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2.352,
+      0,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.352, 0, 0, 1);
+  }
+  38.34% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      -0.311,
+      0,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.311, 0, 0, 1);
+  }
+  60.56% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0.007,
+      0,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.007, 0, 0, 1);
+  }
+  82.78% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+
+.animation-target {
+  -webkit-animation: slideDown 2400ms linear both;
+  animation: slideDown 2400ms ease-out both;
+}
+
+@keyframes slideDown {
+  0% { opacity: 0.3;
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  2.84% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  2.94% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -3000,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -300, 0, 1);
+  }
+  6.05% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -1690.637,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -169.637, 0, 1);
+  }
+  9.16% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -890.585,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -89.585, 0, 1);
+  }
+  12.27% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -43.49,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -43.49, 0, 1);
+  }
+  15.38% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -18.647,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -18.647, 0, 1);
+  }
+  21.6% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -0.728,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.728, 0, 1);
+  }
+  27.81% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1.732,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1.732, 0, 1);
+  }
+  66.68% {
+    -webkit-transform: matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -0.002,
+      0,
+      1
+    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.002, 0, 1);
+  }
+  100% { opacity: 1;
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
