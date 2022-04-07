@@ -1,5 +1,5 @@
 body {
-  background: lavender;
+  background: linen;
   margin: 0;
 }
 .image-contents div:hover {
@@ -25,9 +25,10 @@ a {
   z-index: 4;
   padding-bottom: 16px;
   background-color: rgba(0, 0, 0, 1);
-  min-height: 385px;
+  min-height: 500px;
   flex-grow: 0;
   background-position: center;
+  border-bottom: 32px solid teal;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(https://cdna.artstation.com/p/assets/images/images/007/657/242/large/kilart-choe-heonhwa-8.jpg?1507655121);
@@ -144,7 +145,7 @@ a {
   margin-bottom: 40px;
   margin-top: 40px;
   height: auto;
-  min-height: 800px;
+  min-height: 1200px;
 }
 @media (max-width: 991px) {
   .page-content {

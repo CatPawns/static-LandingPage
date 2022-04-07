@@ -28,10 +28,36 @@ function loadPage()
   $(()=>{
     $("#headerID").load("./Header.html");
     $("#page-contentID").load("./page-content.html");
+    console.log("content");
     $("#footerID").load("./footer.html");
+    
+    
     console.log("header load!");
   });
 
+
+/*
+    const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('animate__animated animate__fadeInUp animate__delay-1s');
+    }
+  });
+});
+observer.observe(document.querySelector('.boxim'));
+
+
+$(".cc-overlay").each(function (index, element) {
+  console.log("jquery")
+        // element == this
+        if ($(this).attr("opacity") == "0") {
+            return false;
+        }
+    });
+*/
   
   
 }
@@ -41,4 +67,10 @@ function loadPage()
     console.log("exit");
     lightbox.destroy();
   }
+
+  window.addEventListener('load', (event) => {
+    
+    console.log('DOM fully loaded and parsed');
+    
+});
   </script> 

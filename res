@@ -3,6 +3,20 @@ https://imgur.com/S6lLxID
 https://imgur.com/CkhDchw
 https://www.krenzartwork.com/storage/uploads/assistants_works/20200528/oemGKwC95laocQfF.jpeg
 #3c3c3c
+<script>
+    const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('animate__animated animate__fadeInUp animate__delay-1s');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.boxim'));
+    </script>
 {
     box-sizing: border-box;
   }
