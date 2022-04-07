@@ -217,7 +217,7 @@
 <script>
 document.documentElement.style.setProperty('--animate-delay', '.2s');
 const myImgs = document.querySelectorAll('.cc')
-   const observer = new IntersectionObserver(entries => {
+   let observer = new IntersectionObserver(entries => {
      let delay = 0;
   entries.forEach(entry => {
     delay = delay + 1;
@@ -237,5 +237,6 @@ const myImgs = document.querySelectorAll('.cc')
 myImgs.forEach(image => {
   observer.observe(image);
 });
+observer.observe(document.querySelector("#container"));
 
   </script>

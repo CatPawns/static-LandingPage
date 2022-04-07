@@ -1,6 +1,7 @@
 body {
   background: linen;
   margin: 0;
+  font-family: PT Sans sans-serif ;
 }
 .image-contents div:hover {
   opacity: 1;
@@ -11,6 +12,7 @@ a {
 
 .image-contents div:hover {
   opacity: 1;
+  
 }
 a {
   text-decoration: none;
@@ -107,7 +109,7 @@ a {
   width: auto;
   align-self: center;
   margin-right: auto;
-  font-size: 32px;
+  font-size: 22px;
 }
 @media (max-width: 991px) {
   .nav {
@@ -184,10 +186,11 @@ a {
   height: 400px;
   max-width: 500px;
   max-height: inherit;
-  margin-top: auto;
+  margin-top: 1em;
   margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
+ 
   cursor: pointer;
   pointer-events: auto;
 }
@@ -507,7 +510,10 @@ a {
 .horizontal-view :hover .box {
   transform: translate(0,-32px);
   transition: .3 linear;
-  
+}
+.horizontal-view :hover{
+  transition: 1.9s linear;
+  box-shadow: 2px 12px teal;
 }
 .horizontal-view :hover .boxim {
   transition: 0.3s linear;
@@ -526,7 +532,14 @@ a {
   animation: animation 1000ms linear both;
   animation-delay: 2000;
 }
-
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22t%22%2Ce%3A%22b%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A-50%2Cy%3A0%7D%2Ct%3A%7Bx%3A50%2Cy%3A0%7D%2Cs%3A3%2Cb%3A4%7D%2C%7BT%3A%22c%22%2Ce%3A%22s%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A1%2Cy%3A1%7D%2Ct%3A%7Bx%3A1.5%2Cy%3A1.5%7D%2Cs%3A3%2Cb%3A4%7D%2C%7BT%3A%22t%22%2Ce%3A%22b%22%2Cd%3A1000%2CD%3A500%2Cf%3A%7Bx%3A0%2Cy%3A0%7D%2Ct%3A%7Bx%3A-100%2Cy%3A0%7D%2Cs%3A3%2Cb%3A4%7D%5D%7D */
 
 @keyframes animation {
