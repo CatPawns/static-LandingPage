@@ -21,13 +21,16 @@
   
 
   </body>
+  <script defer src="mode.js"></script>
 <script defer> 
 function loadPage()
 {
 
   $(()=>{
     $("#headerID").load("./Header.html");
-    $("#page-contentID").load("./page-content.html");
+    $("#page-contentID").load("./page-content.html", function(){
+    
+    })
     console.log("content");
     $("#footerID").load("./footer.html");
     
@@ -71,7 +74,6 @@ $(".cc-overlay").each(function (index, element) {
   window.addEventListener('load', (event) => {
     
     console.log('DOM fully loaded and parsed');
-    createObserver();
     
 });
   </script> 
