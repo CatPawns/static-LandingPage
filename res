@@ -2,6 +2,7 @@ https://imgur.com/kRBx0WM
 https://imgur.com/S6lLxID
 https://imgur.com/CkhDchw
 https://www.krenzartwork.com/storage/uploads/assistants_works/20200528/oemGKwC95laocQfF.jpeg
+https://i.imgur.com/Vzmce3U.png
 #3c3c3c
 <script>
     const observer = new IntersectionObserver(entries => {
