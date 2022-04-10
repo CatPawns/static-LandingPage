@@ -40,3 +40,28 @@ let options = {
 // Adding the observer to the element
 observer.observe(el)
 }
+
+function setAnimation(){
+  document.documentElement.style.setProperty('--animate-delay', '.2s');
+const myImgs = document.querySelectorAll('.cc')
+   let observer = new IntersectionObserver(entries => {
+     let delay = 0;
+  entries.forEach(entry => {
+    delay = delay + 1;
+    let t = 'animate__delay-';
+    t = t.concat(delay.toString(), 's');
+    console.log(t);
+    if (entry.intersectionRatio > 0) {
+      console.log('in the view');
+      entry.target.classList.add('animate__animated','animate__fadeInUp', t);
+    } else {
+      
+      console.log('out of view');
+    }
+  });
+});
+
+myImgs.forEach(image => {
+  observer.observe(image);
+});
+}

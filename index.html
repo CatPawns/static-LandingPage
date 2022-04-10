@@ -1,6 +1,18 @@
 
   <head>
-  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<link
+href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
+rel="stylesheet"
+/>
+<link
+href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap"
+rel="stylesheet"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script>
    
          <link rel="stylesheet" type="text/css" href="./photoswipe.css"> 
@@ -11,8 +23,161 @@
   <body onbeforeunload="dismount()" onload="loadPage()">
       
     <div id="headerID"></div>
+    <body>
+    <div id="HeaderID" class="header animation-slide">
+    <div class="header-content">
+      <div class="logo">
+        <img src="https://i.imgur.com/sGy2Eoz.jpg" class="img" />
+        <div class="title-area">Front-end Developer / Illustrator</div>
+      </div>
+      <div class="nav">
+        <a href="./index.html" class="a">Top</a>
+        <a href="./about.html" class="a">About</a>
+        <a href="./contact.html" class="a">Contact</a>
+      </div>
+    </div>
+    </div>
     <div id="page-contentID"></div>
 
+    <div class="container">
+    <h1>
+        
+        <span class="animatable">Gallery</span>
+    </h1>
+    </div>
+    
+    <div id="BodyContentID" class="page-content">
+      <!--grid of gallery-->
+    <div class="horizontal-view" id="gallery--getting-started">
+    <!-- link to lightbox-->
+      <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg"
+      data-pswp-width="1000" data-pswp-height="1500" 
+      data-cropped="true" data-pswp-srcset="https://cdn.photoswipe.com/photoswipe-demo-images/photos/srcset-test/4-400x600.png 400w, https://cdn.photoswipe.com/photoswipe-demo-images/photos/srcset-test/4-800x1200.png 800w, https://cdn.photoswipe.com/photoswipe-demo-images/photos/srcset-test/4-1000x1500.png 1000w" target="_blank"
+      class="cc">
+      <!--image src to show-->
+        <img src="https://i.imgur.com/sGy2Eoz.jpg" class="boxim" />
+        <!--overlay with text-->
+        <div id="overlay" class="cc-overlay">
+          <div class="box"><p>Full Illustration</p></div>
+        </div>
+      </a>
+    
+      <a href="https://i.imgur.com/Vzmce3U.png"
+      data-pswp-width="1050"
+      data-pswp-height="1200" class="cc">
+        <img
+          src="https://i.imgur.com/Vzmce3U.png"
+          class="boxim"
+        />
+        <div id="overlay" class="cc-overlay">
+          <div class="box"><p>Full Illustration</p></div>
+        </div>
+      </a>
+    
+      <a href="https://i.imgur.com/CkhDchw.png"
+      data-pswp-width="800"
+      data-pswp-height="1130" class="cc">
+        <img
+          src="https://i.imgur.com/CkhDchw.png"
+          class="boxim"
+        />
+        <div id="overlay" class="cc-overlay">
+          <div class="box"><p>Full Illustration</p></div>
+        </div>
+      </a>
+    
+      <a href="https://www.krenzartwork.com/storage/uploads/assistants_works/20200528/oemGKwC95laocQfF.jpeg"
+      data-pswp-width="1400""
+      data-pswp-height="715" class="cc">
+        <img
+          src="https://www.krenzartwork.com/storage/uploads/assistants_works/20200528/oemGKwC95laocQfF.jpeg
+          "
+          class="boxim"
+        />
+        <div id="overlay" class="cc-overlay">
+          <div class="box"><p>Full Illustration</p></div>
+        </div>
+      </a>
+    
+      <a href="https://cdna.artstation.com/p/assets/images/images/007/657/242/large/kilart-choe-heonhwa-8.jpg?1507655121"
+      data-pswp-width="1400"
+      data-pswp-height="715" class="cc">
+        <img
+          src="https://cdna.artstation.com/p/assets/images/images/007/657/242/large/kilart-choe-heonhwa-8.jpg?1507655121"
+          class="boxim"
+        />
+        <div id="overlay" class="cc-overlay">
+          <div class="box"><p>Full Illustration</p></div>
+        </div>
+      </a>
+    
+      
+      <a href="https://imgur.com/S6lLxID.png"
+      data-pswp-width="1669"
+      data-pswp-height="2500" class="cc">
+        <img src="https://imgur.com/S6lLxID.png" class="boxim" />
+        <div id="overlay" class="cc-overlay">
+          <div class="box"><p>Full Illustration</p></div>
+        </div>
+      </a>
+    </div>
+    
+    
+      <div class="c animatable">
+    <div class="svgcont">
+    <svg width="726" height="172" viewBox="0 0 726 172" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute;" class=" animation-reveal">
+      <path d="M651.972 144L92 144L92 -1.12932e-07L651.972 4.88414e-05L726 72L651.972 144Z" fill="#008080"></path>
+      <path d="M78.4904 20.406H672.22V164.087H78.4904L0 92.2463L78.4904 20.406Z" fill="black"></path>
+      <mask id="mask0_14_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="9" y="28" width="673" height="144">
+      <path d="M87.4904 28H681.22V171.681H87.4904L9 99.8403L87.4904 28Z" fill="black"></path>
+      </mask>
+      <g mask="url(#mask0_14_2)">
+      <rect x="563.4" y="-11.6578" width="6.24516" height="220.178" transform="rotate(24.8131 563.4 -11.6578)" fill="white" fill-opacity="0.16"></rect>
+      <rect x="654.536" y="-11.6578" width="6.24516" height="220.178" transform="rotate(24.8131 654.536 -11.6578)" fill="white" fill-opacity="0.49"></rect>
+      <rect x="622.468" y="-11.6578" width="6.24516" height="220.178" transform="rotate(24.8131 622.468 -11.6578)" fill="white" fill-opacity="0.49"></rect>
+      <rect x="590.4" y="-11.6578" width="6.24516" height="220.178" transform="rotate(24.8131 590.4 -11.6578)" fill="white" fill-opacity="0.22"></rect>
+      <rect x="563.4" y="-11.6578" width="6.24516" height="220.178" transform="rotate(24.8131 563.4 -11.6578)" fill="white" fill-opacity="0.16"></rect>
+      <rect x="530.4" y="-11.6578" width="6.24516" height="220.178" transform="rotate(24.8131 530.4 -11.6578)" fill="white" fill-opacity="0.06"></rect>
+      </g>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M103 28H97V34V50H103V34L119 34V28H103Z" fill="white" fill-opacity="0.16"></path>
+      </svg>
+      <div id="overlay" class="animatable cc-overlay animation-reveal" style="background-color: transparent;">
+      <div class="box" style="padding-top:32px; font-size: 14px;width: 50%;"><p>Complete illustration setting, character + full bg. Dynamic with tons of detail. Multiple versions and variations (ex. day time/night time light settings) are considered as customisation.
+      Prices may vary based on estimated amount of time spent on each illustration and complexity.</p></div>
+      <img class="sliderImg" src="https://www.krenzartwork.com/storage/uploads/assistants_works/20200528/oemGKwC95laocQfF.jpeg">
+    </div>
+    </div>
+      
+      
+    </div>
+    
+    <div class="c reverse animatable">
+    <div class="svgcont">
+    <svg width="726" height="165" viewBox="0 0 726 165" fill="none" xmlns="http://www.w3.org/2000/svg" class="animatable animation-reveal">
+      <path d="M74.0277 143.312L634 143.312L634 7.78136e-06L74.0277 5.65017e-05L-6.73296e-05 71.6559L74.0277 143.312Z" fill="#008080"/>
+      <path d="M647.51 20.308H53.7802V163.302H647.51L726 91.8049L647.51 20.308Z" fill="black"/>
+      <mask id="mask0_18_19" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="48" y="19" width="678" height="146">
+      <path d="M646.846 19.9045H48.1685V164.09H646.846L725.99 91.9973L646.846 19.9045Z" fill="black"/>
+      </mask>
+      <g mask="url(#mask0_18_19)">
+      <rect width="6.23991" height="219.311" transform="matrix(-0.908445 0.418005 0.421318 0.906913 162.6 -11.6026)" fill="white" fill-opacity="0.16"/>
+      <rect width="6.23991" height="219.311" transform="matrix(-0.908445 0.418005 0.421318 0.906913 71.4636 -11.6026)" fill="white" fill-opacity="0.49"/>
+      <rect width="6.23991" height="219.311" transform="matrix(-0.908445 0.418005 0.421318 0.906913 103.532 -11.6026)" fill="white" fill-opacity="0.49"/>
+      <rect width="6.23991" height="219.311" transform="matrix(-0.908445 0.418005 0.421318 0.906913 135.6 -11.6026)" fill="white" fill-opacity="0.22"/>
+      <rect width="6.23991" height="219.311" transform="matrix(-0.908445 0.418005 0.421318 0.906913 162.6 -11.6026)" fill="white" fill-opacity="0.16"/>
+      <rect width="6.23991" height="219.311" transform="matrix(-0.908445 0.418005 0.421318 0.906913 195.6 -11.6026)" fill="white" fill-opacity="0.06"/>
+      </g>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M607 33.837V27.8657H623H629H629L629 33.837H629V49.7606H623V33.837L607 33.837Z" fill="white" fill-opacity="0.16"/>
+      </svg>
+      
+      <div id="overlay" class=" cc-overlay" style="background-color: transparent;">
+      <div class="box" style="padding-top:32px;font-size: 14px;width: 50%;"><p>painterly style with glowy and pastel palettes – simple background gradient and elements can be included.</p></div>
+      <img class="sliderImg" src="https://i.imgur.com/Vzmce3U.png">
+    </div>
+    </div>
+      
+      
+    </div>
     <!--
     <a href="static-LandingPage/me2.html" rel="home">Inkishipaint</a></h1>
 <a href="./me.html">My other page</a>
@@ -30,11 +195,16 @@ function loadPage()
 {
 
   $(()=>{
-    $("#headerID").load("./Header.html");
-    $("#page-contentID").load("./page-content.html");
+   // $("#headerID").load("./Header.html");
+   /*
+    $("#page-contentID").load("./page-content.html", ()=>{
+      scrollTrigger(".animatable","animation-reveal");
+      setAnimation();
+    });
+    */
     console.log("content");
     $("#footerID").load("./footer.html",()=>{
-      setTimeout(scrollTrigger(".animatable","animation-reveal"),3000);
+      
     });
     
     
@@ -50,7 +220,8 @@ function loadPage()
   }
 
   window.addEventListener('load', (event) => {
-    
+    setAnimation();
+    scrollTrigger(".animatable","animation-reveal");
     console.log('DOM fully loaded and parsed');
     
 });
