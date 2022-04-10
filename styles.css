@@ -912,7 +912,8 @@ a {
 .container {
   padding: 100px 20px 0;
   max-width: 960px;
-    font-size: 40px;
+    font-size: 80px;
+    text-align: start;
   color : #555;
   font-family : Josefin Sans, sans-serif;
 }
@@ -926,8 +927,12 @@ h1 {
 }
 h1 span {
   opacity: 0;
+  text-align: start;
   display: block;
  font-size: inherit;
+}
+.c .animation-reveal{
+  opacity: 0;
 }
 .animation-reveal
 {
