@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: PT Sans sans-serif ;
 }
+
 .image-contents div:hover {
   opacity: 1;
 }
@@ -931,12 +932,13 @@ h1 span {
   display: block;
  font-size: inherit;
 }
+
 .c .animation-reveal{
   opacity: 0;
 }
 .animation-reveal
 {
-  
+  opacity: 0;
   animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
 }
 
@@ -976,4 +978,31 @@ h1 span {
 
   width: 100%;
   height: 200px;
+}
+
+.svgcont
+{
+  
+  display: flex;
+    justify-content: flex-end;
+    width: 726px;
+    height: 200px;
+
+}
+.c
+{
+  
+  display: flex;
+    justify-content: flex-end;
+    height: 500px;
+    padding-top: 32px;
+}
+.reverse
+{
+  justify-content : flex-start
+}
+.sliderImg
+{
+  height: 400px;
+  object-fit : contain;
 }

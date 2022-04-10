@@ -31,12 +31,11 @@ function loadPage()
 
   $(()=>{
     $("#headerID").load("./Header.html");
-    $("#page-contentID").load("./page-content.html", function(){
-      scrollTrigger(".animatable","animation-reveal");
-      
-    });
+    $("#page-contentID").load("./page-content.html");
     console.log("content");
-    $("#footerID").load("./footer.html");
+    $("#footerID").load("./footer.html",()=>{
+      setTimeout(scrollTrigger(".animatable","animation-reveal"),3000);
+    });
     
     
     console.log("header load!");

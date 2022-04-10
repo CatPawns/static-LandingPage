@@ -1,6 +1,3 @@
-console.log("loaded");
-
-
 function scrollTrigger(selector , arg) {
   // Multiple element can have same class/selector,
   // so we are using querySelectorAll
@@ -19,9 +16,9 @@ function scrollTrigger(selector , arg) {
 function addObserver(el , arg){
   
 let options = {
-  root: document.querySelector('#container'),
-  rootMargin: '0px',
-  threshold: 1.0
+  root: null,
+  rootMargin: '200px',
+  threshold: 0
 }
   // We are creating a new IntersectionObserver instance
   let observer = new IntersectionObserver((entries, observer) => { // This takes a callback function that receives two arguments: the elements list and the observer instance.
@@ -34,12 +31,12 @@ let options = {
       // We are removing the observer from the element after adding the active class
     }else
     {
-      
+     //entry.target.classList.remove(arg);
       //observer.unobserve(entry.target, arg);
       
     }
   })
-});
+},options);
 // Adding the observer to the element
 observer.observe(el)
 }
