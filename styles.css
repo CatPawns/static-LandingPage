@@ -987,6 +987,7 @@ h1 span {
     justify-content: flex-end;
 
 }
+
 .c
 {
   
@@ -994,6 +995,11 @@ h1 span {
     justify-content: flex-end;
     margin-top: 32px;
     background: cadetblue;
+}
+@media (max-width: 991px) {
+  .c {
+    flex-direction: column;
+  }
 }
 .reverse
 {
