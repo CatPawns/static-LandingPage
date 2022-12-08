@@ -913,7 +913,7 @@ a {
 .container {
   padding: 100px 20px 0;
   max-width: 960px;
-    font-size: 80px;
+    font-size: 40px;
     text-align: start;
   color : #555;
   font-family : Josefin Sans, sans-serif;
@@ -985,8 +985,6 @@ h1 span {
   
   display: flex;
     justify-content: flex-end;
-    width: 726px;
-    height: 200px;
 
 }
 .c
@@ -994,8 +992,8 @@ h1 span {
   
   display: flex;
     justify-content: flex-end;
-    height: 500px;
-    padding-top: 32px;
+    margin-top: 32px;
+    background: cadetblue;
 }
 .reverse
 {
